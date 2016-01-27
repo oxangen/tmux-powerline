@@ -62,8 +62,9 @@ __process_settings() {
 		export TMUX_POWERLINE_SEG_WEATHER_GREP="${TMUX_POWERLINE_SEG_WEATHER_GREP_DEFAULT}"
 	fi
 	if [ -z "$TMUX_POWERLINE_SEG_WEATHER_LOCATION" ]; then
-		echo "No weather location specified.";
-		exit 8
+		export TMUX_POWERLINE_SEG_WEATHER_LOCATION="2161853"
+		#echo "No weather location specified.";
+		#exit 8
 	fi
 }
 

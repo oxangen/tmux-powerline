@@ -3,6 +3,7 @@
 run_segment() {
 	type ifstat >/dev/null 2>&1
 	if [ "$?" -ne 0 ]; then
+		echo "ifstat not found."
 		return 1
 	fi
 
@@ -21,7 +22,7 @@ run_segment() {
 		case ${inf} in
 			eth*) type="⎆"
 				;;
-			wlan*) type="☫"
+			wlan* | em*) type="☫"
 				;;
 			en*) type=" "
 				;;
